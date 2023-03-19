@@ -17,47 +17,47 @@
 			<div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
 				<h1 class = "text-center">Order Now </h1>
 				<div class = "card-body">
-					<form th:action="@{/Customers}" th:object = "${customer}" method="POST">
+					<form th:action="@{/Orders}" th:object = "${order}" method="POST">
 						<div class ="form-group">
-							<label> Customer Name </label>
+							<label> Customer ID </label>
 							<input
 							type = "text"
-							name = "customerName"
-							th:field = "*{cName}"
+							name = "customerID"
+							th:field = "*{cId}"
 							class = "form-control"
-							placeholder="Enter Your Name" 
+							placeholder="Enter Customer id" 
 							/>
 						</div>
 						
 						<div class ="form-group">
-							<label> Age </label>
+							<label> Price </label>
 							<input
 							type = "text"
-							name = "customerAge"
-							th:field = "*{cAge}"
+							name = "orderprice"
+							th:field = "*{oPrice}"
 							class = "form-control"
-							placeholder="Enter Your Age" 
+							placeholder="Enter order price" 
 							/>
 						</div>
 						
 						<div class ="form-group">
-							<label> NIC </label>
+							<label> No of Installments </label>
 							<input
 							type = "text"
-							name = "customerNic"
-							th:field = "*{cNic}"
+							name = "noofInstallments"
+							th:field = "*{noOfInstallments}"
 							class = "form-control"
-							placeholder="Enter Your NIC" 
+							placeholder="Enter Number of installments" 
 							/>
 						</div>
 						<div class ="form-group">
-							<label> Address </label>
+							<label> Remainder </label>
 							<input
 							type = "text"
-							name = "customerAddress"
-							th:field = "*{cAddress}"
+							name = "Remainder"
+							th:field = "*{Remainder}"
 							class = "form-control"
-							placeholder="Enter Your Address" 
+							placeholder="Enter the remainder" 
 							/>
 						</div>
 						
