@@ -24,5 +24,10 @@ public class CustomerController {
 	    return "Customer";
 	}
 
-	
+	@GetMapping("/Customers/new")
+	public String createCustomerForm(Model model) {
+		Customer customer = new Customer();
+		model.addAttribute("customer",customer);
+		return "create_customer";
+	}
 }

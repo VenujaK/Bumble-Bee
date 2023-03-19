@@ -3,6 +3,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.BumbleBee.app.entity.Order;
 import com.BumbleBee.app.service.CustomerService;
 import com.BumbleBee.app.service.OrderService;
 
@@ -23,5 +24,11 @@ public class OrderController {
 		    model.addAttribute("Order", orderService.getAllOrder());
 		    return "Order";
 		}
-
+		@GetMapping("/Orders/new")
+		public String createOrderForm(Model model) {
+			Order order = new Order();
+			model.addAttribute("order",order);
+			return "create_order";
+		
+		}
 }
