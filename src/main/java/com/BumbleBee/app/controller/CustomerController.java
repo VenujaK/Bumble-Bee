@@ -30,4 +30,9 @@ public class CustomerController {
 		model.addAttribute("customer",customer);
 		return "create_customer";
 	}
+	@PostMapping("/Customers")
+	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
+		CustomerService.saveCustomer(customer);
+		return "redirect:/Customer";
+	}
 }
