@@ -29,12 +29,32 @@
             </script>
     
 </head>
+<style>
+	.tbl {
+  color:white;
+  padding:20px;
+}
+.table-group-divider{
+ padding:20px;
+}
+h1{
+ color:white;
+}
+body {
+            background-image: url(bg.png);
+            min-width: auto;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-attachment: local;
+        }
+
+</style>
 <body>
 
 <!--        Nav bar-->
-        <nav id="navbar_top" class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <img src="logofinal.png" style="width: 75px;
+                <img src="./Bumble bee.png" style="width: 75px;
                      height: 75px;">
                 <a class="navbar-brand" href="#">Bumble bee</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,22 +63,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" th:href="@{'/home'}">Home</a>
+                            <a class="nav-link active" aria-current="page" th:href="@{'/index'}">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{'/new'}">Add Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{'/manageproducts'}">Manage Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{'/new'}">Insert New Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{'/CustomerView'}">View Customer Details</a>
+                            <a class="nav-link" th:href="@{'/CustomerView'}"> Customers</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
+                    
                 </div>
             </div>
         </nav>
@@ -74,7 +89,7 @@
 <br>
 
 
-<table class="table">
+<table class="table bg-secondary rounded tbl">
   <thead>
     <tr>
       <th scope="col">Customer's ID</th>

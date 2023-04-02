@@ -49,6 +49,7 @@ public class ProductController {
         return mav;
         
     }
+    
 //    
 //   @RequestMapping(value = "/Update/{pid}", method = RequestMethod.POST)
 //    public String update(@PathVariable(name = "pid") long pid, @ModelAttribute("product") Product updatedProduct) {
